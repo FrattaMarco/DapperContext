@@ -34,7 +34,7 @@ jobs:
       run: dotnet pack --configuration Release --no-restore
 
     - name: Publish to GitHub Packages
-      if: github.ref == 'refs/heads/main'
+      if: github.ref == 'refs/heads/master'
       env:
         TOKENWRITE: ${{ secrets.TOKENWRITE }}
       run: dotnet nuget push **/*.nupkg --source "https://nuget.pkg.github.com/FrattaMarco/index.json" --api-key $TOKENWRITE
