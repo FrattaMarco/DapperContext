@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   build:
@@ -26,9 +27,6 @@ jobs:
 
     - name: Build
       run: dotnet build --configuration Release --no-restore ./src/DapperContext/DapperContext.csproj
-
-    # - name: Run tests
-    #   run: dotnet test --no-restore --verbosity normal ./src/DapperContext/DapperContext.csproj
 
     - name: Create NuGet package
       run: dotnet pack --configuration Release --no-restore ./src/DapperContext/DapperContext.csproj
