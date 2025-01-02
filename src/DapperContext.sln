@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperContext.Application", "DapperContext\DapperContext.Application.csproj", "{BB1C38B9-1976-40FD-8E85-299803DB0FA8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperContext.Persistence", "DapperContext.Persistence\DapperContext.Persistence.csproj", "{032D2C9F-36C2-480F-BC3E-2B974145348D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperContext", "DapperContext\DapperContext.csproj", "{BB1C38B9-1976-40FD-8E85-299803DB0FA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{BB1C38B9-1976-40FD-8E85-299803DB0FA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB1C38B9-1976-40FD-8E85-299803DB0FA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB1C38B9-1976-40FD-8E85-299803DB0FA8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{032D2C9F-36C2-480F-BC3E-2B974145348D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{032D2C9F-36C2-480F-BC3E-2B974145348D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{032D2C9F-36C2-480F-BC3E-2B974145348D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{032D2C9F-36C2-480F-BC3E-2B974145348D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

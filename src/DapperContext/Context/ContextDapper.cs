@@ -1,7 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using System.Data;
 
-namespace DapperContext.Persistence.Context
+namespace DapperContext.Context
 {
     public sealed class ContextDapper(string connectionString)
     {
