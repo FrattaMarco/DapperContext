@@ -154,13 +154,14 @@ namespace DapperContext.Repositories
         /// </summary>
         /// <typeparam name="T">The object's type</typeparam>
         /// <param name="query">Query in string format</param>
+        /// <param name="parameters">Parameters</param>
         /// <returns>A collection from DB that satisfies the query</returns>
-        public async Task<IEnumerable<T>> GetAsyncWithQuery<T>(string query) where T : class
+        public async Task<IEnumerable<T>> GetAsyncWithQuery<T>(string query, object parameters) where T : class
         {
             IEnumerable<T> result;
             try
             {
-                result = await _contextDapper.Connection!.QueryAsync<T>(query, transaction: _contextDapper.Transaction);
+                result = await _contextDapper.Connection!.QueryAsync<T>(query, parameters, transaction: _contextDapper.Transaction);
             }
             catch (Exception)
             {
@@ -173,14 +174,15 @@ namespace DapperContext.Repositories
         /// Executes a query
         /// </summary>
         /// <param name="query">Query in string format</param>
+        /// <param name="parameters">Parameters</param>
         /// <returns>A Boolean value. True if the query was executed, false if it was not executed</returns>
-        public async Task<bool> ExecuteAsyncWithQuery(string query)
+        public async Task<bool> ExecuteAsyncWithQuery(string query, object parameters)
         {
             int affectedRows;
 
             try
             {
-                affectedRows = await _contextDapper.Connection!.ExecuteAsync(query, transaction: _contextDapper.Transaction);
+                affectedRows = await _contextDapper.Connection!.ExecuteAsync(query, parameters, transaction: _contextDapper.Transaction);
             }
             catch (Exception)
             {
@@ -195,13 +197,14 @@ namespace DapperContext.Repositories
         /// </summary>
         /// <typeparam name="T">The object's type</typeparam>
         /// <param name="query">Query in string format</param>
+        /// <param name="parameters">Parameters</param>
         /// <returns>The object updated</returns>
-        public async Task<T> UpdateAsyncWithQuery<T>(string query) where T : class
+        public async Task<T> UpdateAsyncWithQuery<T>(string query, object parameters) where T : class
         {
             T updatedObject;
             try
             {
-                updatedObject = await _contextDapper.Connection!.QuerySingleAsync<T>(query, transaction: _contextDapper.Transaction);
+                updatedObject = await _contextDapper.Connection!.QuerySingleAsync<T>(query, parameters, transaction: _contextDapper.Transaction);
             }
             catch (Exception)
             {

@@ -39,14 +39,14 @@ It takes as input the name of the stored procedure, an object (anonymous type)  
 
 # Query string
 #### GetAsyncWithQuery
-It takes as input, in format string, the query.
+It takes as input, in format string, the query and the parameters.
 **It returns an IEnumerable** That is all the records obtained by the query. 
 
 #### ExecuteAsyncWithQuery
-It takes as input, in format string, the query.
+It takes as input, in format string, the query and the parameters.
 **It returns a boolean** variable that certifies whether or not the correct execution has taken place.
 
 #### UpdateAsyncWithQuery
-It takes as input, in format string, the query.
+It takes as input, in format string, the query and the parameters.
 
 **It returns a T object** that is the object modified with the new values.
