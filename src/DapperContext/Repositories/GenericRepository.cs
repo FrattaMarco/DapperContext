@@ -156,7 +156,7 @@ namespace DapperContext.Repositories
         /// <param name="query">Query in string format</param>
         /// <param name="parameters">Parameters</param>
         /// <returns>A collection from DB that satisfies the query</returns>
-        public async Task<IEnumerable<T>> GetAsyncWithQuery<T>(string query, object parameters) where T : class
+        public async Task<IEnumerable<T>> GetAsyncWithQuery<T>(string query, object parameters = null!) where T : class
         {
             IEnumerable<T> result;
             try
@@ -176,7 +176,7 @@ namespace DapperContext.Repositories
         /// <param name="query">Query in string format</param>
         /// <param name="parameters">Parameters</param>
         /// <returns>A Boolean value. True if the query was executed, false if it was not executed</returns>
-        public async Task<bool> ExecuteAsyncWithQuery(string query, object parameters)
+        public async Task<bool> ExecuteAsyncWithQuery(string query, object parameters = null!)
         {
             int affectedRows;
 
@@ -199,7 +199,7 @@ namespace DapperContext.Repositories
         /// <param name="query">Query in string format</param>
         /// <param name="parameters">Parameters</param>
         /// <returns>The object updated</returns>
-        public async Task<T> UpdateAsyncWithQuery<T>(string query, object parameters) where T : class
+        public async Task<T> UpdateAsyncWithQuery<T>(string query, object parameters = null!) where T : class
         {
             T updatedObject;
             try
