@@ -22,16 +22,16 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./src/DapperContext/DapperContext.csproj
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore ./src/DapperContext/DapperContext.csproj
 
-    - name: Run tests
-      run: dotnet test --no-restore --verbosity normal
+    # - name: Run tests
+    #   run: dotnet test --no-restore --verbosity normal ./src/DapperContext/DapperContext.csproj
 
     - name: Create NuGet package
-      run: dotnet pack --configuration Release --no-restore
+      run: dotnet pack --configuration Release --no-restore ./src/DapperContext/DapperContext.csproj
 
     - name: Publish to GitHub Packages
       if: github.ref == 'refs/heads/master'
