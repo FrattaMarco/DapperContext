@@ -40,4 +40,6 @@ jobs:
       if: github.ref == 'refs/heads/master'
       env:
         TOKENWRITE: ${{ secrets.TOKENWRITE }}
-      run: dotnet nuget push **/*.nupkg --source "https://nuget.pkg.github.com/FrattaMarco/index.json" --api-key $TOKENWRITE
+      run: |
+        $token = $env:TOKENWRITE
+        dotnet nuget push **/*.nupkg --source "https://nuget.pkg.github.com/FrattaMarco/index.json" --api-key $token
