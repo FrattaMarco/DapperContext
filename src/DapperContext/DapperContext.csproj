@@ -4,6 +4,7 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<PackageId>DapperContext</PackageId>
+		<Description>This library, leveraging Dapper, handles read and write operations with SSMS.</Description>
 		<Authors>Fratta Marco</Authors>
 		<Nullable>enable</Nullable>
 		<Version>1.0.0</Version>

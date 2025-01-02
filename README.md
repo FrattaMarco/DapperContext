@@ -1,5 +1,5 @@
 # Dapper Context
-This library, leveraging Dapper, handles read and write operations with SQL databases.
+This library, leveraging Dapper, handles read and write operations with SSMS.
 
 By exploiting the Generic Repository and Unit Of Work patterns, it manages to be not only high-performance, but also generic and robust since it also takes into account transactional contexts with generic data types.
 
