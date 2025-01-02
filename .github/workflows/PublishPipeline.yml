@@ -28,6 +28,11 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore ./src/DapperContext/DapperContext.csproj
 
+    - name: Debug TOKENWRITE
+      run: echo $TOKENWRITE
+      env:
+        TOKENWRITE: ${{ secrets.TOKENWRITE }}
+
     - name: Create NuGet package
       run: dotnet pack --configuration Release --no-restore ./src/DapperContext/DapperContext.csproj
 
